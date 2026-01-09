@@ -8,10 +8,10 @@ const Footer = () => {
       <div className="container">
         <div className="footer__content">
           <p className="footer__text">
-            © {currentYear} Mauro Carlucci Portafolio.
+            © {currentYear} Mauro Carlucci Professional Portfolio.
           </p>
           <p className="footer__text">
-            Hecho usando React y TypeScript
+            Made using React and TypeScript
           </p>
         </div>
       </div>
