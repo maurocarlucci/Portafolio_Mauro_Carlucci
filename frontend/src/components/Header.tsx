@@ -25,7 +25,7 @@ const Header = () => {
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <nav className="nav container">
         <div className="nav__logo">
-          <span>Mauro Carlucci Portfolio</span>
+          <span>Mauro Carlucci Portafolio</span>
         </div>
         <ul className={`nav__menu ${isMobileMenuOpen ? 'show' : ''}`}>
           <li><a href="#inicio" onClick={(e) => { e.preventDefault(); scrollToSection('inicio'); }}>Start</a></li>
