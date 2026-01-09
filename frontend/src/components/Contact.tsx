@@ -26,11 +26,14 @@ const Contact = () => {
     setSubmitStatus('idle');
     
     try {
-      // EmailJS Configuration - Replace these values with your credentials
-      // See EMAILJS_SETUP.md for setup instructions
-      const serviceId = 'service_pls3lpl'; // Replace with your EmailJS Service ID
-      const templateId = 'template_e54w9vl'; // Replace with your EmailJS Template ID
-      const publicKey = '1STb0KPfzEFm883l6'; // Replace with your EmailJS Public Key
+      // EmailJS Configuration - Load from environment variables
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+      
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error('EmailJS configuration is missing. Please check your .env file.');
+      }
       
       // Send email using EmailJS
       await emailjs.send(
@@ -90,8 +93,10 @@ const Contact = () => {
 
   // Initialize EmailJS
   useEffect(() => {
-    // Replace with your EmailJS Public Key
-    emailjs.init('YOUR_PUBLIC_KEY');
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    if (publicKey) {
+      emailjs.init(publicKey);
+    }
   }, []);
 
   // Close modal with ESC key
