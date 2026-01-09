@@ -5,8 +5,8 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Sistema de búsqueda y consulta de documentos internos usando Azure AI Services.',
-      description: 'Los equipos (soporte, RRHH, operaciones) pierden tiempo buscando respuestas en documentos internos.',
+      title: 'Internal document search and query system using Azure AI Services.',
+      description: 'Teams (support, HR, operations) waste time searching for answers in internal documents. This system allows',
       technologies: ['React', 'Node.js', 'Python', 'Azure AI Services'],
       image: azureImage,
       github: 'https://github.com/maurocarlucci/LigaHikru-M2Devs'
