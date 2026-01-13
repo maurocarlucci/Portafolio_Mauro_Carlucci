@@ -1,16 +1,42 @@
 import './Projects.css';
 import azureImage from '../assets/Azure.png';
+import nopCommerceImage from '../assets/nop-commerce.png';
+import HikruImage from '../assets/Hikru.png';
+
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  technologies: string[];
+  image: string;
+  github?: string;
+}
 
 const Projects = () => {
-  const projects = [
+  const projects: Project[] = [
     {
       id: 1,
+      title: 'Hikru Tech - Email Analysis Platform',
+      description: 'Build a platform that analyzes email chains with information from potential patients, detects what data is missing in order to contact them and schedule an appointment at the nearest clinic.',
+      technologies: ['React', 'Node.js', 'TypeScript', 'Tailwind', 'Ant Design'],
+      image: HikruImage
+    },
+    {
+      id: 2,
       title: 'Internal document search and query system using Azure AI Services.',
       description: 'Teams (support, HR, operations) waste time searching for answers in internal documents. This system allows',
       technologies: ['React', 'Node.js', 'Python', 'Azure AI Services'],
       image: azureImage,
       github: 'https://github.com/maurocarlucci/LigaHikru-M2Devs'
-    }
+    },
+    {
+      id: 3,
+      title: 'Developed e-commerce platform using modern web technologies.',
+      description: 'An e-commerce site was created using NopCommerce and adapting the code to the clients request; work was also done with the Costa Rican postal service API.',
+      technologies: ['.NET 8', 'C#', 'SQL Server', 'Razor'],
+      image: nopCommerceImage
+    },
+
   ];
 
   return (

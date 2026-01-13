@@ -28,7 +28,7 @@ const Header = () => {
           <span>Mauro Carlucci Professional Portfolio</span>
         </div>
         <ul className={`nav__menu ${isMobileMenuOpen ? 'show' : ''}`}>
-          <li><a href="#inicio" onClick={(e) => { e.preventDefault(); scrollToSection('inicio'); }}>Start</a></li>
+          <li><a href="#inicio" onClick={(e) => { e.preventDefault(); scrollToSection('inicio'); }}>Home</a></li>
           <li><a href="#sobre-mi" onClick={(e) => { e.preventDefault(); scrollToSection('sobre-mi'); }}>About Me</a></li>
           <li><a href="#habilidades" onClick={(e) => { e.preventDefault(); scrollToSection('habilidades'); }}>Skills</a></li>
           <li><a href="#proyectos" onClick={(e) => { e.preventDefault(); scrollToSection('proyectos'); }}>Projects</a></li>
